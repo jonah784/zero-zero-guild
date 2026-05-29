@@ -7,130 +7,179 @@
   <meta name="description" content="Zero Zero Guild is a confidential peer mastermind and community for venture-funded cofounders. Keeping your company from imploding.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <!-- Analytics placeholder: replace with your Google Analytics or Plausible snippet -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
 </head>
 <body>
 
   <!-- ============ HERO ============ -->
   <section id="hero" class="hero">
-    <div class="hero__glow"></div>
+    <div class="hero__overlay"></div>
     <div class="container hero__inner">
-      <img src="assets/logo.jpg" alt="Zero Zero Guild — two interlocking circles, gold and blue, joined by a point of light" class="hero__logo" width="480" height="270">
-      <p class="hero__tagline">A Peer Mastermind and Community for Venture-Funded Cofounders</p>
-      <h1 class="hero__headline">Keeping your company from imploding.</h1>
-      <p class="hero__subhead">Helping cofounders build unbreakable relationships, scale with clarity, and navigate success together.</p>
+      <div class="hero__brand">
+        <span class="oo-mark oo-mark--large">00</span>
+        <h1 class="hero__wordmark">zero zero</h1>
+        <p class="hero__tagline">A Peer Mastermind &amp; Community<br>for Venture Funded Cofounders</p>
+      </div>
+      <div class="hero__divider"></div>
+      <h2 class="hero__headline">Keeping your company from imploding.</h2>
+      <p class="hero__subhead">We help cofounders build unbreakable relationships,<br>scale with clarity, and navigate success&mdash;together.</p>
       <a href="#apply" class="btn btn--gold">Request Access</a>
     </div>
   </section>
 
   <!-- ============ WHY COFOUNDERS FAIL ============ -->
-  <section id="why" class="section section--why">
+  <section id="why" class="section section--dark">
     <div class="container">
-      <h2 class="section__title">Why Cofounders Fail</h2>
-      <div class="failure-grid">
-        <div class="failure-card">
-          <div class="failure-card__icon">
-            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="18" cy="24" r="14" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.8"/><circle cx="30" cy="24" r="14" stroke="var(--blue)" stroke-width="1.5" fill="none" opacity="0.8"/><line x1="24" y1="12" x2="24" y2="36" stroke="var(--gold)" stroke-width="0.5" opacity="0.4"/></svg>
+      <h2 class="section__title section__title--light">Why Cofounders Fail</h2>
+      <div class="failure-row">
+        <div class="failure-item">
+          <div class="failure-item__icon">
+            <svg viewBox="0 0 40 40" width="40" height="40"><path d="M20 4l4 12h-2l4 12h-3l5 10h-16l5-10h-3l4-12h-2z" fill="var(--gold)" opacity="0.9"/></svg>
           </div>
-          <p>Relationships crack when alignment slips</p>
+          <h3>Relationships Crack</h3>
+          <p>Misalignment creates instability.</p>
         </div>
-        <div class="failure-card">
-          <div class="failure-card__icon">
-            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="16" stroke="var(--gold)" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="8" stroke="var(--blue)" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="2" fill="var(--gold)"/></svg>
+        <div class="failure-item">
+          <div class="failure-item__icon">
+            <svg viewBox="0 0 40 40" width="40" height="40"><rect x="6" y="24" width="5" height="12" fill="var(--gold)" opacity="0.6"/><rect x="13.5" y="18" width="5" height="18" fill="var(--gold)" opacity="0.7"/><rect x="21" y="12" width="5" height="24" fill="var(--gold)" opacity="0.8"/><rect x="28.5" y="6" width="5" height="30" fill="var(--gold)" opacity="0.9"/></svg>
           </div>
-          <p>Pressure exposes everything as the company scales</p>
+          <h3>Pressure Exposes Everything</h3>
+          <p>Growth without alignment leads to friction.</p>
         </div>
-        <div class="failure-card">
-          <div class="failure-card__icon">
-            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="14" stroke="var(--gold)" stroke-width="1.5" fill="none"/><line x1="4" y1="24" x2="44" y2="24" stroke="var(--blue)" stroke-width="1" opacity="0.6"/><line x1="4" y1="18" x2="44" y2="30" stroke="var(--blue)" stroke-width="0.5" opacity="0.4"/><line x1="4" y1="30" x2="44" y2="18" stroke="var(--blue)" stroke-width="0.5" opacity="0.4"/></svg>
+        <div class="failure-item">
+          <div class="failure-item__icon">
+            <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="14" cy="14" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5"/><circle cx="26" cy="14" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5"/><circle cx="20" cy="24" r="5" fill="none" stroke="var(--gold)" stroke-width="1.5"/><line x1="14" y1="19" x2="17" y2="21" stroke="var(--gold)" stroke-width="1"/><line x1="26" y1="19" x2="23" y2="21" stroke="var(--gold)" stroke-width="1"/></svg>
           </div>
-          <p>Outside forces &mdash; investors, advisors &mdash; create friction</p>
+          <h3>Outside Forces Interfere</h3>
+          <p>Investors, advisors, and the world start pulling you apart.</p>
         </div>
-        <div class="failure-card">
-          <div class="failure-card__icon">
-            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="14" stroke="var(--gold)" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="14" stroke="var(--gold)" stroke-width="3" fill="none" opacity="0.15"/><circle cx="24" cy="24" r="3" fill="var(--gold)"/></svg>
+        <div class="failure-item">
+          <div class="failure-item__icon">
+            <svg viewBox="0 0 40 40" width="40" height="40"><path d="M20 6l3 6 2-1-1 4 3-1-7 10-7-10 3 1-1-4 2 1z" fill="var(--gold)" opacity="0.9"/><path d="M11 28h18v2h-18z" fill="var(--gold)" opacity="0.5"/></svg>
           </div>
-          <p>Success can breed arrogance</p>
+          <h3>Success Creates Arrogance</h3>
+          <p>Money gets confused with wisdom.</p>
         </div>
-        <div class="failure-card">
-          <div class="failure-card__icon">
-            <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="16" cy="24" r="12" stroke="var(--gold)" stroke-width="1.5" fill="none"/><circle cx="32" cy="24" r="12" stroke="var(--blue)" stroke-width="1.5" fill="none"/></svg>
+        <div class="failure-item">
+          <div class="failure-item__icon">
+            <svg viewBox="0 0 40 40" width="40" height="40"><circle cx="20" cy="20" r="12" fill="none" stroke="var(--gold)" stroke-width="1.5"/><line x1="12" y1="12" x2="28" y2="28" stroke="var(--gold)" stroke-width="2"/><line x1="28" y1="12" x2="12" y2="28" stroke="var(--gold)" stroke-width="2"/></svg>
           </div>
-          <p>Companies implode when partnerships break</p>
+          <h3>Companies Implode</h3>
+          <p>Partnerships break. Visions die. Everyone loses.</p>
         </div>
       </div>
-      <p class="section__closer">Zero Zero Guild exists to prevent this.</p>
+
+      <div class="prevent-box">
+        <span class="oo-mark">00</span>
+        <div>
+          <h3>Zero Zero exists to prevent this.</h3>
+          <p>Real cofounders. Real conversations. Real guidance.<br>So you can build, scale, and win&mdash;together.</p>
+        </div>
+      </div>
     </div>
   </section>
-
-  <!-- ============ DIVIDER ============ -->
-  <div class="divider" aria-hidden="true">
-    <svg viewBox="0 0 120 40" width="120" height="40"><circle cx="48" cy="20" r="16" stroke="var(--gold)" stroke-width="1" fill="none" opacity="0.5"/><circle cx="72" cy="20" r="16" stroke="var(--blue)" stroke-width="1" fill="none" opacity="0.5"/><circle cx="60" cy="20" r="2" fill="var(--light)"/></svg>
-  </div>
 
   <!-- ============ THREE PHASES ============ -->
-  <section id="phases" class="section section--phases">
+  <section id="phases" class="section section--cream">
     <div class="container">
-      <h2 class="section__title">The Three Phases</h2>
-      <div class="phases-grid">
-        <div class="phase-card">
-          <span class="phase-card__number">01</span>
-          <h3 class="phase-card__title">Relationship &amp; Stability</h3>
-          <p>Align, communicate, and build unbreakable trust.</p>
+      <div class="phases-header">
+        <div class="phases-header__line"></div>
+        <h2 class="section__title section__title--dark">The Three Phases</h2>
+        <div class="phases-header__line"></div>
+      </div>
+      <p class="phases-subtitle">Master the relationship. Scale with clarity. Navigate success.</p>
+
+      <div class="phases-row">
+        <div class="phase-item">
+          <div class="phase-circle phase-circle--dark">
+            <span class="phase-num">01</span>
+            <svg viewBox="0 0 60 60" width="60" height="60"><circle cx="22" cy="30" r="8" fill="none" stroke="var(--cream)" stroke-width="1.2"/><circle cx="38" cy="30" r="8" fill="none" stroke="var(--cream)" stroke-width="1.2"/><path d="M28 26 l4 4 -4 4" fill="none" stroke="var(--cream)" stroke-width="1" opacity="0.6"/></svg>
+          </div>
+          <h3>Relationship &amp; Stability</h3>
+          <p>The foundation. Align, communicate, and build unbreakable trust.</p>
         </div>
-        <div class="phase-card">
-          <span class="phase-card__number">02</span>
-          <h3 class="phase-card__title">Scaling &amp; Strain</h3>
-          <p>The pressure test &mdash; where growth amplifies everything.</p>
+
+        <div class="phase-arrow" aria-hidden="true">
+          <svg viewBox="0 0 40 20" width="40" height="20"><line x1="0" y1="10" x2="32" y2="10" stroke="var(--charcoal)" stroke-width="1.5"/><path d="M28 5 l8 5 -8 5" fill="none" stroke="var(--charcoal)" stroke-width="1.5"/></svg>
         </div>
-        <div class="phase-card">
-          <span class="phase-card__number">03</span>
-          <h3 class="phase-card__title">Success &amp; Preservation</h3>
-          <p>The danger zone &mdash; where ego and outside forces can pull a team apart.</p>
+
+        <div class="phase-item">
+          <div class="phase-circle phase-circle--gold">
+            <span class="phase-num">02</span>
+            <svg viewBox="0 0 60 60" width="60" height="60"><path d="M30 18 l3 8 h-6z" fill="var(--cream)" opacity="0.8"/><circle cx="30" cy="38" r="6" fill="none" stroke="var(--cream)" stroke-width="1.2"/><line x1="30" y1="26" x2="30" y2="32" stroke="var(--cream)" stroke-width="1"/><line x1="24" y1="42" x2="20" y2="48" stroke="var(--cream)" stroke-width="0.8" opacity="0.6"/><line x1="36" y1="42" x2="40" y2="48" stroke="var(--cream)" stroke-width="0.8" opacity="0.6"/></svg>
+          </div>
+          <h3>Scaling &amp; Strain</h3>
+          <p>The pressure test. Growth amplifies everything. If it cracks, go back and strengthen the foundation.</p>
+        </div>
+
+        <div class="phase-arrow" aria-hidden="true">
+          <svg viewBox="0 0 40 20" width="40" height="20"><line x1="0" y1="10" x2="32" y2="10" stroke="var(--charcoal)" stroke-width="1.5"/><path d="M28 5 l8 5 -8 5" fill="none" stroke="var(--charcoal)" stroke-width="1.5"/></svg>
+        </div>
+
+        <div class="phase-item">
+          <div class="phase-circle phase-circle--charcoal">
+            <span class="phase-num">03</span>
+            <svg viewBox="0 0 60 60" width="60" height="60"><path d="M30 16 l12 28 h-24z" fill="none" stroke="var(--cream)" stroke-width="1.2"/><line x1="30" y1="16" x2="30" y2="30" stroke="var(--cream)" stroke-width="0.8" opacity="0.5"/><path d="M26 34 l4-6 4 6" fill="none" stroke="var(--cream)" stroke-width="1"/></svg>
+          </div>
+          <h3>Success &amp; Preservation</h3>
+          <p>The danger zone. Success brings noise, ego, and outside forces that can pull you apart.</p>
         </div>
       </div>
-      <p class="section__closer">You can't get to success without solving the first two.</p>
+
+      <div class="phases-closer">
+        <p>You can't get to success without solving the first two.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ============ DIVIDER ============ -->
-  <div class="divider" aria-hidden="true">
-    <svg viewBox="0 0 120 40" width="120" height="40"><circle cx="48" cy="20" r="16" stroke="var(--gold)" stroke-width="1" fill="none" opacity="0.5"/><circle cx="72" cy="20" r="16" stroke="var(--blue)" stroke-width="1" fill="none" opacity="0.5"/><circle cx="60" cy="20" r="2" fill="var(--light)"/></svg>
-  </div>
+  <!-- ============ WHAT YOU GET + QUOTE (split panel) ============ -->
+  <section id="benefits" class="section section--split">
+    <div class="split-left">
+      <div class="split-left__inner">
+        <div class="split-brand">
+          <span class="oo-mark">00</span>
+          <span class="split-brand__text">zero zero</span>
+        </div>
+        <h2 class="split-left__headline">A tight peer group for venture funded cofounders in Silicon Valley.</h2>
 
-  <!-- ============ WHAT YOU GET ============ -->
-  <section id="benefits" class="section section--benefits">
-    <div class="container">
-      <h2 class="section__title">What You Get</h2>
-      <ul class="benefits-list">
-        <li>A confidential mastermind with operators who understand the experience</li>
-        <li>Peer-to-peer accountability and strategic guidance</li>
-        <li>Support at every stage &mdash; from zero to success and beyond</li>
-        <li>A tight, curated peer group of venture-funded cofounders in Silicon Valley</li>
-      </ul>
+        <div class="benefit-row">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 36 36" width="36" height="36"><circle cx="18" cy="18" r="16" fill="var(--charcoal)" opacity="0.1"/><circle cx="13" cy="16" r="4" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/><circle cx="23" cy="16" r="4" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/><path d="M8 28 a10 8 0 0 1 20 0" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/></svg>
+          </div>
+          <p>Confidential mastermind with operators who get it.</p>
+        </div>
+        <div class="benefit-row">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 36 36" width="36" height="36"><circle cx="18" cy="18" r="16" fill="var(--charcoal)" opacity="0.1"/><circle cx="18" cy="18" r="8" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/><circle cx="18" cy="18" r="3" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/><line x1="18" y1="4" x2="18" y2="10" stroke="var(--charcoal)" stroke-width="0.8"/><line x1="32" y1="18" x2="26" y2="18" stroke="var(--charcoal)" stroke-width="0.8"/></svg>
+          </div>
+          <p>Peer-to-peer accountability and strategic guidance.</p>
+        </div>
+        <div class="benefit-row">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 36 36" width="36" height="36"><circle cx="18" cy="18" r="16" fill="var(--charcoal)" opacity="0.1"/><path d="M12 26 l6-16 6 16" fill="none" stroke="var(--charcoal)" stroke-width="1.2"/><line x1="14" y1="22" x2="22" y2="22" stroke="var(--charcoal)" stroke-width="1"/><path d="M18 10 l2-4 m-2 4 l-2-4" fill="none" stroke="var(--charcoal)" stroke-width="0.8"/></svg>
+          </div>
+          <p>Navigate every stage together&mdash;from zero to success and beyond.</p>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- ============ QUOTE ============ -->
-  <section id="quote" class="section section--quote">
-    <div class="container">
-      <blockquote class="pullquote">
-        <p>&ldquo;In the right relationship, you can build anything. In the wrong one, nothing survives.&rdquo;</p>
+    <div class="split-right">
+      <div class="split-right__overlay"></div>
+      <blockquote class="split-quote">
+        <span class="split-quote__mark">&ldquo;</span>
+        <p>In the right relationship, you can build anything. In the wrong one, nothing survives.</p>
+        <cite>&mdash; zero zero</cite>
       </blockquote>
     </div>
   </section>
 
   <!-- ============ SIGN-UP FORM ============ -->
-  <section id="apply" class="section section--apply">
+  <section id="apply" class="section section--dark section--form">
     <div class="container">
-      <h2 class="section__title">Request Access</h2>
+      <h2 class="section__title section__title--light">Request Access</h2>
       <p class="form-intro">Membership is selective. Tell us about yourself and your company.</p>
 
       <form id="signup-form" class="apply-form" action="https://formspree.io/f/xykvovwz" method="POST" novalidate>
-        <!-- Honeypot spam protection -->
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
         <div class="form-row">
@@ -191,7 +240,10 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <svg class="footer__mark" viewBox="0 0 120 60" width="80" height="40"><circle cx="48" cy="30" r="20" stroke="var(--gold)" stroke-width="1" fill="none" opacity="0.6"/><circle cx="72" cy="30" r="20" stroke="var(--blue)" stroke-width="1" fill="none" opacity="0.6"/><circle cx="60" cy="30" r="2.5" fill="var(--light)"/></svg>
+      <div class="footer__brand">
+        <span class="oo-mark oo-mark--small">00</span>
+        <span class="footer__wordmark">zero zero guild</span>
+      </div>
       <p class="footer__conf">All conversations and member identities are held in strict confidence.</p>
       <p class="footer__contact"><a href="mailto:hello@zerozeroguild.com">hello@zerozeroguild.com</a></p>
       <p class="footer__copy">&copy; 2026 Zero Zero Guild. All rights reserved.</p>
