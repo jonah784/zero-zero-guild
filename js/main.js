@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     });
     if (!valid) return;
 
-    var btn = form.querySelector('.btn--submit');
+    var btn = form.querySelector('.btn--full');
     btn.textContent = 'Submitting...';
     btn.disabled = true;
 
@@ -72,7 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
 // Fade-in on scroll
 (function () {
-  var sections = document.querySelectorAll('.section');
+  var sections = document.querySelectorAll('[class^="s-"]');
   if (!('IntersectionObserver' in window)) {
     sections.forEach(function (s) { s.style.opacity = 1; });
     return;
