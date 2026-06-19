@@ -122,7 +122,7 @@ a:hover { color: var(--gold-bright); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--black);
+  background: #000;
   overflow: hidden;
 }
 .hero__glow {
@@ -148,27 +148,28 @@ a:hover { color: var(--gold-bright); }
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 4rem 1.5rem;
+  padding: 6rem 1.5rem 4rem;
 }
-.hero__logo {
-  max-width: 480px;
-  margin: 0 auto 2.5rem;
-}
-.hero__tagline {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--light-dim);
-  margin-bottom: 2rem;
+.hero__headline {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  line-height: 1.25;
+  color: var(--white);
+  letter-spacing: 0.01em;
+  margin-bottom: 1.8rem;
 }
 .hero__rule {
-  width: 40px;
+  width: 50px;
   height: 1px;
   background: var(--gold);
-  opacity: 0.4;
-  margin: 0 auto 2rem;
+  opacity: 0.35;
+  margin: 0 auto 2.5rem;
+}
+.hero__logo {
+  max-width: 300px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.85;
 }
 
 /* ============ UNFAIR ADVANTAGE (dark) ============ */
@@ -506,17 +507,17 @@ a:hover { color: var(--gold-bright); }
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.hero__headline,
 .hero__logo,
-.hero__tagline,
 .hero .btn {
   animation: fadeUp 0.7s ease-out both;
 }
-.hero__tagline { animation-delay: 0.25s; }
+.hero__logo { animation-delay: 0.25s; }
 .hero .btn { animation-delay: 0.4s; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
-  .hero__logo { max-width: 320px; }
+  .hero__logo { max-width: 240px; }
   .phases {
     flex-direction: column;
     align-items: center;
@@ -532,7 +533,7 @@ a:hover { color: var(--gold-bright); }
   }
 }
 @media (max-width: 520px) {
-  .hero__logo { max-width: 260px; }
+  .hero__logo { max-width: 200px; }
   .form-row { grid-template-columns: 1fr; }
   .hero__inner { padding: 5rem 1.2rem 3rem; }
 }
