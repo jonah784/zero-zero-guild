@@ -45,6 +45,24 @@ a:hover { color: var(--gold-bright); }
   margin: 0 auto;
 }
 
+/* ============ NAV ============ */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 1.5rem 2rem;
+}
+.nav__logo {
+  height: 50px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.nav__logo:hover {
+  opacity: 1;
+}
+
 /* ============ SHARED ============ */
 .label {
   display: block;
@@ -165,11 +183,6 @@ a:hover { color: var(--gold-bright); }
   background: var(--gold);
   opacity: 0.35;
   margin: 0 auto 2.5rem;
-}
-.hero__logo {
-  max-width: 300px;
-  margin: 0 auto 2.5rem;
-  opacity: 0.85;
 }
 
 /* ============ UNFAIR ADVANTAGE (dark) ============ */
@@ -508,16 +521,15 @@ a:hover { color: var(--gold-bright); }
   to { opacity: 1; transform: translateY(0); }
 }
 .hero__headline,
-.hero__logo,
 .hero .btn {
   animation: fadeUp 0.7s ease-out both;
 }
-.hero__logo { animation-delay: 0.25s; }
-.hero .btn { animation-delay: 0.4s; }
+.hero .btn { animation-delay: 0.3s; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
-  .hero__logo { max-width: 240px; }
+  .nav { padding: 1rem 1.2rem; }
+  .nav__logo { height: 40px; }
   .phases {
     flex-direction: column;
     align-items: center;
@@ -533,7 +545,7 @@ a:hover { color: var(--gold-bright); }
   }
 }
 @media (max-width: 520px) {
-  .hero__logo { max-width: 200px; }
+  .nav__logo { height: 34px; }
   .form-row { grid-template-columns: 1fr; }
   .hero__inner { padding: 5rem 1.2rem 3rem; }
 }
