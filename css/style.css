@@ -194,7 +194,7 @@ a:hover { color: var(--gold-bright); }
   font-family: var(--serif);
   font-size: clamp(1.15rem, 2.5vw, 1.35rem);
   line-height: 1.85;
-  color: var(--light-dim);
+  color: #ccc8c0;
   margin-bottom: 1.5rem;
 }
 .s-advantage .highlight {
@@ -265,7 +265,7 @@ a:hover { color: var(--gold-bright); }
   font-family: var(--serif);
   font-size: clamp(1.15rem, 2.5vw, 1.35rem);
   line-height: 1.85;
-  color: var(--light-dim);
+  color: #ccc8c0;
   margin-bottom: 1.5rem;
 }
 .s-room .highlight {
@@ -438,7 +438,7 @@ a:hover { color: var(--gold-bright); }
 }
 .inside-item p {
   font-size: 0.92rem;
-  color: var(--light-dim);
+  color: #ccc8c0;
   line-height: 1.65;
 }
 
