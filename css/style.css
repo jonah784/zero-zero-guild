@@ -177,6 +177,15 @@ a:hover { color: var(--gold-bright); }
   letter-spacing: 0.01em;
   margin-bottom: 1.8rem;
 }
+.hero__sub {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.8rem;
+}
 .hero__rule {
   width: 50px;
   height: 1px;
