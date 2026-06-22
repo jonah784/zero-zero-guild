@@ -37,7 +37,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     btn.textContent = 'Submitting...';
     btn.disabled = true;
 
-    // Submit via fetch to Formspree (or your own endpoint)
     var data = new FormData(form);
 
     fetch(form.action, {
@@ -50,19 +49,18 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
           form.style.display = 'none';
           document.getElementById('form-success').hidden = false;
         } else {
-          btn.textContent = 'Request Access';
+          btn.textContent = 'Start a Conversation';
           btn.disabled = false;
           alert('Something went wrong. Please try again or email us directly.');
         }
       })
       .catch(function () {
-        btn.textContent = 'Request Access';
+        btn.textContent = 'Start a Conversation';
         btn.disabled = false;
         alert('Connection error. Please try again.');
       });
   });
 
-  // Clear red border on input
   form.querySelectorAll('[required]').forEach(function (field) {
     field.addEventListener('input', function () {
       this.style.borderColor = '';
@@ -70,24 +68,28 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   });
 })();
 
-// Fade-in on scroll
+// Scroll reveal animations
 (function () {
-  var sections = document.querySelectorAll('[class^="s-"]');
+  var reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+
   if (!('IntersectionObserver' in window)) {
-    sections.forEach(function (s) { s.style.opacity = 1; });
+    reveals.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
     return;
   }
-
-  sections.forEach(function (s) { s.style.opacity = 0; s.style.transition = 'opacity 0.8s ease'; });
 
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
+        entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
 
-  sections.forEach(function (s) { observer.observe(s); });
+  reveals.forEach(function (el) {
+    observer.observe(el);
+  });
 })();

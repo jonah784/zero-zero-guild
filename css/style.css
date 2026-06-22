@@ -231,6 +231,62 @@ a:hover { color: var(--gold-bright); }
   margin-top: 0.5rem;
 }
 
+/* ============ QUOTES PANEL ============ */
+.s-quotes {
+  padding: var(--space) 0;
+  background: var(--dark);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.wrap--wide {
+  max-width: 1000px;
+}
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.quote-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 2rem 1.8rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.quote-card:hover {
+  border-color: rgba(201,168,76,0.2);
+  transform: translateY(-3px);
+}
+.quote-card--accent {
+  border-color: rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.04);
+}
+.quote-card__mark {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+.quote-card p {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--cream);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.quote-card cite {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-muted);
+}
+
 /* ============ FOUNDERS ============ */
 .s-founders {
   padding: var(--space) 0;
@@ -573,10 +629,35 @@ a:hover { color: var(--gold-bright); }
   to { opacity: 1; transform: translateY(0); }
 }
 .hero__headline,
+.hero__sub,
 .hero .btn {
   animation: fadeUp 0.7s ease-out both;
 }
-.hero .btn { animation-delay: 0.3s; }
+.hero__sub { animation-delay: 0.2s; }
+.hero .btn { animation-delay: 0.4s; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.quote-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s;
+}
+.is-visible .quote-card:nth-child(1) { transition-delay: 0s; }
+.is-visible .quote-card:nth-child(2) { transition-delay: 0.15s; }
+.is-visible .quote-card:nth-child(3) { transition-delay: 0.3s; }
+.is-visible .quote-card {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
@@ -590,6 +671,10 @@ a:hover { color: var(--gold-bright); }
     padding-top: 0;
     transform: rotate(90deg);
     margin: -0.5rem 0;
+  }
+  .quotes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .founders-grid {
     grid-template-columns: 1fr;
