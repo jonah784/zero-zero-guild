@@ -103,6 +103,57 @@ a:hover { color: var(--gold-bright); }
   opacity: 0.4;
   margin-bottom: 2rem;
 }
+/* ============ BULLET LISTS ============ */
+.bullet-list {
+  list-style: none;
+  padding: 0;
+}
+.bullet-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #ccc8c0;
+}
+.bullet-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.6;
+}
+.bullet-list li strong {
+  font-weight: 600;
+  color: var(--cream);
+}
+.bullet-list--dark li {
+  color: var(--text-mid);
+}
+.bullet-list--dark li::before {
+  background: var(--gold-muted);
+}
+.bullet-list--dark li strong {
+  color: var(--text);
+}
+.bullet-list--lg li {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.bullet-list--lg li strong {
+  font-family: var(--serif);
+}
+.bullet-list .highlight {
+  color: var(--cream);
+  font-style: italic;
+}
+
 .btn {
   display: inline-block;
   font-family: var(--sans);
