@@ -659,19 +659,165 @@ a:hover { color: var(--gold-bright); }
   transform: translateY(0);
 }
 
+/* ============ CASE STUDY ============ */
+.s-case { background: var(--dark); padding: 5rem 0; color: var(--white); }
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.case-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 2rem 1.8rem;
+}
+.case-card h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--light-dim);
+  margin-bottom: 1rem;
+}
+.case-card--work {
+  border-color: rgba(168,200,216,0.2);
+  background: rgba(168,200,216,0.04);
+}
+.case-card--work h3 { color: var(--blue); }
+.case-card--work p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.75rem;
+}
+.case-card--work p:last-child { margin-bottom: 0; }
+.case-card--after {
+  border-color: rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.04);
+}
+.case-card--after h3 { color: var(--gold); }
+
+/* ============ DIFF GRID ============ */
+.s-different { background: var(--charcoal); padding: 5rem 0; }
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.diff-card {
+  padding: 2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+.diff-card h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--light-dim);
+  margin-bottom: 1rem;
+}
+.diff-card--us {
+  border-color: rgba(201,168,76,0.15);
+  background: rgba(201,168,76,0.04);
+}
+.diff-card--us h3 { color: var(--gold); }
+.diff-card--us li { color: var(--text-mid); }
+.diff-card--us li strong { color: var(--white); font-weight: 700; }
+
+/* ============ RESULTS ============ */
+.s-results { background: var(--dark); padding: 5rem 0; color: var(--white); }
+
+/* ============ HOW IT WORKS (3 cards) ============ */
+.inside-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.inside-card {
+  padding: 2rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+.inside-card__num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.inside-card h3 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.inside-card p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--light-dim);
+}
+
+/* ============ FAQ ============ */
+.s-faq {
+  background: var(--cream);
+  padding: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+.s-faq .heading-md {
+  font-family: var(--serif);
+  color: var(--black);
+}
+.faq-list { max-width: 700px; margin: 2rem auto 0; }
+.faq-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+.faq-item summary {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--black);
+  padding: 1.2rem 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: '+';
+  flex-shrink: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.faq-item[open] summary::before { content: '\2212'; }
+.faq-item p {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  padding: 0 0 1.2rem 2rem;
+  margin: 0;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.2rem; }
   .nav__logo { height: 40px; }
-  .phases {
-    flex-direction: column;
-    align-items: center;
-  }
-  .phase__arrow {
-    padding-top: 0;
-    transform: rotate(90deg);
-    margin: -0.5rem 0;
-  }
   .quotes-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -680,9 +826,11 @@ a:hover { color: var(--gold-bright); }
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .inside-grid {
+  .case-grid,
+  .diff-grid,
+  .inside-three {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
 @media (max-width: 520px) {
